@@ -1,0 +1,33 @@
+{
+  "parent": "aztecrain:root",
+  "criteria": {
+    "has_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aztecrain:ceremonial_knife"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.aztecrain.knife.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "aztecrain:ceremonial_knife"
+    },
+    "title": {
+      "translate": "advancement.aztecrain.knife.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_knife"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

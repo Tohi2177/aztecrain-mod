@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "has_copper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.aztecrain.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "aztecrain:ceremonial_knife"
+    },
+    "title": {
+      "translate": "advancement.aztecrain.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_copper"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

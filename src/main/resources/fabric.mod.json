@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "aztecrain",
+  "name": "Aztec Rain",
+  "description": "Perform sacrifices to control the rain and storms.",
+  "version": "${version}",
+  "authors": [
+    "Nolly"
+  ],
+  "contact": {
+    "website": "https://cafe.thenolle.com"
+  },
+  "contributors": [
+    "zelimonster (original idea)"
+  ],
+  "license": "NFE-OSL",
+  "icon": "assets/aztecrain/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.nolly.aztecrain.client.AztecRainDataGenerator"
+    ],
+    "client": [
+      "com.nolly.aztecrain.client.AztecRainClient"
+    ],
+    "mixins": [
+      "aztecrain.mixins.json"
+    ],
+    "main": [
+      "com.nolly.aztecrain.AztecRain"
+    ]
+  },
+  "depends": {
+    "minecraft": "${minecraft_version}",
+    "fabric": "*",
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}"
+  }
+}

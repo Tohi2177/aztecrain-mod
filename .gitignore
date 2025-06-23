@@ -1,0 +1,33 @@
+# --- Build system & artifacts ---
+.gradle/
+build/
+
+# --- IntelliJ IDE / Android Studio ---
+*.iml
+.idea/
+  # Ignore workspace & caches
+  **/workspace.xml
+  **/tasks.xml
+  **/usage.statistics.xml
+  **/dictionaries/
+  **/shelf
+  **/caches/
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# --- Kotlin / Java compiled output ---
+*.class
+*.log
+hs_err_pid*
+
+# --- Kotlin 2.0 gradle data dir ---
+.kotlin/
+
+# --- OS-specific cruft ---
+.DS_Store
+Thumbs.db
+
+# --- Misc artifacts ---
+*.jar
+*.war
+*.zip

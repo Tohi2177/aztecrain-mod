@@ -1,0 +1,42 @@
+/gamerule doDaylightCycle false
+/summon villager ~ ~ ~ {VillagerData:{type:plains,profession:farmer,level:2},equipment:{head:{id:diamond_helmet},chest:{id:diamond_chestplate},legs:{id:diamond_leggings},feet:{id:diamond_boots}}}
+/effect give Player328 aztecrain:grace infinite 255 true
+/check_alter
+/tp -19.56 -58.80 38.51
+/check_alter
+/check_altar
+/summon pig ~ ~ ~ {NoAI:1b,NoGravity:1b}
+/give @p pig_spawn_egg[entity_data={id:pig,CustomName:[{text:Sacrifice}],CustomNameVisible:1b,Health:1,Glowing:1b,NoAI:1b,NoGravity:1b,OnGround:1b,PersistenceRequired:1b,Silent:1b,attributes:[{id:max_health,base:1f}]}] 1
+/summon pig ~ ~ ~ {CustomName:'[{"text":"Sacrifice"}]',CustomNameVisible:1b,Health:1,Glowing:1b,NoAI:1b,NoGravity:1b,OnGround:1b,PersistenceRequired:1b,Silent:1b,attributes:[{id:"generic.armor",base:1f},{id:"generic.max_health",base:1f}]}
+/give Player308 minecraft:command_block
+/gamerule commandBlockOutput false
+/check_altar
+/effect clear
+/recipe give Player772 aztecrain:ceremonial_knife
+/advancement grant Player772 only aztecrain:recipes/tools/ceremonial_knife
+/advancement grant Player772 everything
+/advancement revoke Player199 from aztecrain:root
+/advancement grant Player199 only aztecrain:first_ritual
+/advancement grant Player199 only aztecrain:storm_master
+/advancement revoke Player199 only aztecrain:storm_master
+/advancement revoke Player199 only aztecrain:first_ritual
+/effect give Player199 aztecrain:grace 1 1 true
+/weather clear
+/weather rain
+/weather thunder
+/weather clear
+/advancement grant Player199 only aztecrain:storm_master
+/advancement grant Player199 everything
+/advancement revoke Player199 everything
+/advancement grant Player199 everything
+/advancement grant Player213 everything
+/advancement grant Player199 everything
+/advancement grant Player16 everything
+/stopsound @s
+/playsound aztecrain:ritual_start player @s ~ ~ ~ 1 1
+/playsound aztecrain:ritual_success player @s ~ ~ ~ 1 1
+/advancement revoke Player199 everything
+/advancement revoke Player428 everything
+/advancement grant Player428 everything
+/datapack list
+/give Player428 aztecrain:aztec_ritual_tome

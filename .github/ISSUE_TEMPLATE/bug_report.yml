@@ -1,0 +1,63 @@
+name: 🐛 Bug Report
+description: Report a bug with the mod
+title: '[Bug] <short description>'
+labels: [bug, needs triage]
+body:
+	- type: markdown
+		attributes:
+			value: |
+				Thanks for helping make Aztec Rain better! Fill out the info below so we can reproduce the issue.
+
+	- type: input
+		id: version
+		attributes:
+			label: Mod Version
+			description: What version of Aztec Rain are you using?
+			placeholder: e.g. 0.1.0-dev
+		validations:
+			required: true
+
+	- type: input
+		id: mc_version
+		attributes:
+			label: Minecraft Version
+			placeholder: e.g. 1.21.1
+		validations:
+			required: true
+
+	- type: input
+		id: fabric
+		attributes:
+			label: Fabric Loader/API version
+			placeholder: e.g. loader 0.16.14, API 0.116.1
+		validations:
+			required: false
+
+	- type: textarea
+		id: what-happened
+		attributes:
+			label: What happened?
+			description: Describe the bug, what you expected to happen, and what actually happened.
+		validations:
+			required: true
+
+	- type: textarea
+		id: steps
+		attributes:
+			label: Steps to Reproduce
+			description: How can we reliably reproduce this?
+			placeholder: |
+				1. Build altar
+				2. Right-click knife
+				3. Crash
+		validations:
+			required: true
+
+	- type: textarea
+		id: logs
+		attributes:
+			label: Crash Log or Console Output (if any)
+			render: shell
+			placeholder: Paste your logs here or link to a gist
+		validations:
+			required: false

@@ -1,0 +1,14 @@
+{
+  "advancement.aztecrain.firstritual.description": "Perform your first weather ritual.",
+  "advancement.aztecrain.firstritual.title": "The First Skyfall",
+  "advancement.aztecrain.knife.description": "Craft the ceremonial knife.",
+  "advancement.aztecrain.knife.title": "Ceremonial Tools",
+  "advancement.aztecrain.root.description": "Begin your journey into Aztec ritual magic.",
+  "advancement.aztecrain.root.title": "Echoes of the Sky",
+  "advancement.aztecrain.stormmaster.description": "Perform all three ritual outcomes: rain, clear, and thunder.",
+  "advancement.aztecrain.stormmaster.title": "Master of Storms",
+  "effect.aztecrain.grace": "Grace",
+  "item.aztecrain.ceremonial_knife": "Ceremonial Knife",
+  "subtitles.aztecrain.ritual_start": "Ritual begins...",
+  "subtitles.aztecrain.ritual_success": "The skies respond"
+}

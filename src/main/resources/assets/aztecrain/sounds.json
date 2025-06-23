@@ -1,0 +1,10 @@
+{
+  "ritual_start": {
+    "subtitle": "subtitles.aztecrain.ritual_start",
+    "sounds": [ "aztecrain:ritual_start" ]
+  },
+  "ritual_success": {
+    "subtitle": "subtitles.aztecrain.ritual_success",
+    "sounds": [ "aztecrain:ritual_success" ]
+  }
+}

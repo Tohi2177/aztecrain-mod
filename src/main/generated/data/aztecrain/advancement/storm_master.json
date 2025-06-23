@@ -1,0 +1,40 @@
+{
+  "parent": "aztecrain:first_ritual",
+  "criteria": {
+    "called_clear": {
+      "trigger": "aztecrain:called_clear"
+    },
+    "called_rain": {
+      "trigger": "aztecrain:called_rain"
+    },
+    "called_thunder": {
+      "trigger": "aztecrain:called_thunder"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.aztecrain.stormmaster.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:nether_star"
+    },
+    "title": {
+      "translate": "advancement.aztecrain.stormmaster.title"
+    }
+  },
+  "requirements": [
+    [
+      "called_clear"
+    ],
+    [
+      "called_rain"
+    ],
+    [
+      "called_thunder"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
