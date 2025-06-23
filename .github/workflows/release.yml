@@ -9,9 +9,13 @@ on:
       - 'src/**'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
+
     outputs:
       new_version: ${{ steps.extract.outputs.version }}
       should_release: ${{ steps.check.outputs.should_release }}
@@ -24,29 +28,36 @@ jobs:
         id: extract
         run: |
           version=$(grep '^mod_version=' gradle.properties | cut -d= -f2 | tr -d '\r')
+          echo "version=$version"
           echo "version=$version" >> $GITHUB_OUTPUT
 
       - name: 📦 Check if version was already released
         id: check
         run: |
-          tag_exists=$(git ls-remote --tags origin "v${{ steps.extract.outputs.version }}" | wc -l)
+          tag="v${{ steps.extract.outputs.version }}"
+          tag_exists=$(git ls-remote --tags origin "$tag" | wc -l)
           should_release=$([ "$tag_exists" = "0" ] && echo true || echo false)
+          echo "should_release=$should_release"
           echo "should_release=$should_release" >> $GITHUB_OUTPUT
 
       - name: 🧪 Set up JDK 21
         if: steps.check.outputs.should_release == 'true'
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: 21
 
       - name: 🛠️ Grant execute permission for Gradle
         if: steps.check.outputs.should_release == 'true'
         run: chmod +x ./gradlew
 
+      - name: 🧪 Verify JAR presence before build
+        if: steps.check.outputs.should_release == 'true'
+        run: ls -l ./build/libs || echo "ℹ️ No JARs yet — will be created now"
+
       - name: 🏗️ Build mod
         if: steps.check.outputs.should_release == 'true'
-        run: ./gradlew build
+        run: ./gradlew build --warning-mode all
 
       - name: 🚀 Create GitHub Release
         if: steps.check.outputs.should_release == 'true'
@@ -57,3 +68,11 @@ jobs:
           files: build/libs/*.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📄 Upload problems report (if exists)
+        if: steps.check.outputs.should_release == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: gradle-problems-report
+          path: build/reports/problems/problems-report.html
+          if-no-files-found: ignore
