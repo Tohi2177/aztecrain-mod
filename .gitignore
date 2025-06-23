@@ -31,3 +31,7 @@ Thumbs.db
 *.jar
 *.war
 *.zip
+
+
+# Allow Gradle wrapper JAR to be committed
+!gradle/wrapper/gradle-wrapper.jar
